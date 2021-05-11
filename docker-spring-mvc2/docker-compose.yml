@@ -1,0 +1,11 @@
+version: "3.9" 
+services:
+ spring-mvc:
+  image: spring-mvc
+  container_name: spring-mvc
+  working_dir: /usr/local/tomcat/spring-src
+  ports:
+   - 8080:8080
+  volumes:
+   - /home/foxbat/Programming/java/docker-spring-mvc/webapps:/usr/local/tomcat/webapps
+   - /home/foxbat/Programming/java/docker-spring-mvc/repository:/root/.m2/repository
